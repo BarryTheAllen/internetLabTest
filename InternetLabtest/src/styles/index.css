@@ -1,0 +1,15 @@
+@import './base/reset.css';
+@import './base/fonts.css';
+@import './base/variables.css';
+@import './base/global.css';
+
+@import './components/header.css';
+@import './components/nav.css';
+@import './components/hero.css';
+@import './components/how-it-works.css';
+@import './components/reviews.css';
+@import './components/faq.css';
+@import './components/textblock.css';
+@import './components/form.css';
+@import './layouts/main.css';
+@import './utils/media-queries.css';

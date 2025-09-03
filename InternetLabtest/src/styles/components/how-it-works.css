@@ -1,0 +1,86 @@
+.how__this-works-title {
+    margin-top: 80px;
+    margin-bottom: 61px;
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--black);
+}
+
+.how__this-works-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.how__this-works-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.how__this-works-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 280px;
+}
+
+.how__this-works-desc-title {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black);
+    margin-top: 4px;
+}
+
+.how__this-works-desc {
+    font-family: "Graphik LCG";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--dark-gray);
+}
+
+.third__block-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+.third__block-inner-text {
+    width: 592px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.third__block-title {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+    color: var(--black);
+    text-align: center;
+}
+
+.third__block-desc {
+    font-family: "Graphik LCG";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--dark-gray);
+    text-align: center;
+}

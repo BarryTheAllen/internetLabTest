@@ -1,0 +1,140 @@
+.form__title {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--black);
+}
+
+.form__section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form__inner-wrapper-info {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form__inner-wrapper-submit {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form__input {
+    border: 2px solid var(--extralight-gray);
+    border-radius: 4px;
+    width: 384px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    font-family: "Graphik LCG";
+    font-size: 16px;
+}
+
+.form__btn {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--white);
+    border-radius: 4px;
+    padding: 20px 40px;
+    width: 384px;
+    height: 64px;
+    background: var(--primary);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form__btn:hover {
+    background: var(--primary-hover);
+}
+
+.form__input.error {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
+}
+
+.error-message {
+    color: #dc3545;
+    font-family: "Graphik LCG";
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.success-message {
+    color: #28a745;
+    font-family: "Graphik LCG";
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+    padding: 10px;
+    background-color: rgba(40, 167, 69, 0.1);
+    border-radius: 4px;
+}
+
+.checkbox__wrapper.error {
+    outline: 2px solid #dc3545;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.checkbox__wrapper.error label {
+    color: #dc3545;
+}
+
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+.checkbox__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.checkbox-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -30px;
+}

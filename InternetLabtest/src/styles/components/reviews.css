@@ -1,0 +1,116 @@
+.reviews__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 0 60px;
+    width: 100%;
+}
+
+.reviews__title {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.reviews__section .swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.reviews__slide {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.user__info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.user__info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user__name {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black);
+    margin: 0;
+}
+
+.user__city {
+    font-family: "Graphik LCG";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+.user__review {
+    font-family: "Graphik LCG";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--black);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+    position: absolute;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--black);
+}

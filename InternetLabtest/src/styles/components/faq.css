@@ -1,0 +1,119 @@
+.faq__section {
+    width: 100%;
+    max-width: 800px;
+}
+
+.container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 40px;
+}
+
+.faq__title {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--black);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq__item {
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.faq__question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.faq__question:hover span {
+    color: var(--primary-hover);
+}
+
+.faq__question span {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--black);
+    flex: 1;
+    padding-right: 20px;
+}
+
+.faq__icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.faq__icon img {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.icon__minus {
+    display: none;
+}
+
+.faq__item.active .icon__plus {
+    display: none;
+}
+
+.faq__item.active .icon__minus {
+    display: block;
+}
+
+.faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f8f9fa;
+}
+
+.faq__item.active .faq__answer {
+    max-height: 500px;
+}
+
+.faq__answer p {
+    font-family: "Graphik LCG";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--black);
+    padding: 20px;
+    color: #555;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.faq__item.active .faq__answer p {
+    opacity: 1;
+    transform: translateY(0);
+}

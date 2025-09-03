@@ -1,0 +1,45 @@
+.textblock__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.textblock__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.inner__textblock-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 93px;
+}
+
+.text__block {
+    display: flex;
+    flex-direction: column;
+    max-width: 592px;
+}
+
+.text__block-title {
+    font-family: "Graphik LCG";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 178%;
+    color: var(--black);
+    margin-bottom: 17px;
+}
+
+.text__block-desc {
+    font-family: "Graphik LCG";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--black);
+}

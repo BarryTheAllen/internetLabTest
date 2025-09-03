@@ -1,0 +1,334 @@
+@media (max-width: 768px) {
+    .nav__list-logo {
+        display: flex;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .nav__list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        justify-content: flex-start;
+        flex-direction: column;
+        transition: right 0.3s ease;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    
+    .nav__list.active {
+        right: 0;
+    }
+    
+    .burger-menu {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .burger-menu.active span {
+        background: #000000;
+    }
+    
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .nav__item {
+        text-align: center;
+    }
+    
+    .nav__list-link {
+        color: #000000;
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+    }
+    
+    .nav__list-link:hover {
+        color: var(--primary-hover);
+        text-decoration: none;
+    }
+    
+    .hero__title {
+        font-size: 36px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .hero__sub-title {
+        font-size: 16px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .how__this-works-title {
+        font-size: 32px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .third__block-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .third__block-inner-text {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .third__block-title {
+        font-size: 28px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .faq__title {
+        font-size: 32px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        padding: 20px 15px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .textblock__wrapper {
+        flex-direction: column;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .inner__textblock-wrapper {
+        gap: 40px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .text__block {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    .text__block-title,
+    .text__block-desc {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+    
+    .form__input,
+    .form__btn {
+        width: 100%;
+        max-width: 384px;
+        box-sizing: border-box;
+    }
+    
+    .form__inner-wrapper-info,
+    .form__inner-wrapper-submit {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        height: 700px;
+        width: 100%;
+    }
+    
+    .header::after {
+        height: 700px;
+        width: 100%;
+    }
+    
+    .nav__list {
+        padding: 20px;
+    }
+    
+    .nav__list-link {
+        font-size: 18px;
+        padding: 12px 0;
+    }
+    
+    .hero__title {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .hero__sub-title {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .how__this-works-title {
+        font-size: 28px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+    
+    .how__this-works-cards {
+        gap: 20px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .how__this-works-card {
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    
+    .third__block-title {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+    
+    .third__block-desc {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .reviews__title,
+    .faq__title,
+    .form__title {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .faq__question span {
+        font-size: 16px;
+    }
+    
+    .faq__answer p {
+        font-size: 14px;
+    }
+    
+    .text__block-title {
+        font-size: 16px;
+    }
+    
+    .text__block-desc {
+        font-size: 14px;
+    }
+    
+    .form__input {
+        height: 50px;
+        max-width: 100%;
+    }
+    
+    .form__btn {
+        height: 50px;
+        font-size: 16px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav__list {
+        padding: 70px 10px 20px;
+    }
+    
+    .nav__list-link {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    
+    .hero__title {
+        font-size: 24px;
+        padding: 0 5px;
+    }
+    
+    .hero__sub-title {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    
+    .hero__btn {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        padding: 15px 30px;
+        box-sizing: border-box;
+    }
+    
+    .how__this-works-title {
+        font-size: 24px;
+        padding: 0 5px;
+    }
+    
+    .third__block-title {
+        font-size: 20px;
+        padding: 0 5px;
+    }
+    
+    .reviews__title,
+    .faq__title,
+    .form__title {
+        font-size: 24px;
+        padding: 0 5px;
+    }
+    
+    .user__info {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .user__info img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .faq__question {
+        padding: 15px 10px;
+    }
+    
+    .faq__question span {
+        font-size: 14px;
+        padding-right: 10px;
+    }
+    
+    .faq__answer p {
+        padding: 15px 10px;
+        font-size: 12px;
+    }
+    
+    .container, .section, .wrapper {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
