@@ -16,7 +16,7 @@ export function initFormValidation() {
         correct: nameInput.parentElement.querySelector('.correct-icon'),
         error: nameInput.parentElement.querySelector('.error-icon')
     };
-    
+
     const phoneIcons = {
         correct: phoneInput.parentElement.querySelector('.correct-icon'),
         error: phoneInput.parentElement.querySelector('.error-icon')
@@ -56,7 +56,7 @@ export function initFormValidation() {
             agreeCheckbox.parentElement.classList.add('error');
             if (checkboxError) {
                 checkboxError.textContent = 'Необходимо согласие на обработку данных';
-                checkboxError.style.display = 'block';
+                checkboxError.style.display = 'flex';
             }
             return false;
         } else {
@@ -69,8 +69,8 @@ export function initFormValidation() {
     function showError(input, errorElement, icons, message) {
         input.classList.add('error');
         errorElement.textContent = message;
-        errorElement.style.display = 'block';
-        if (icons.error) icons.error.style.display = 'block';
+        errorElement.style.display = 'flex';
+        if (icons.error) icons.error.style.display = 'flex';
         if (icons.correct) icons.correct.style.display = 'none';
     }
 
@@ -78,7 +78,7 @@ export function initFormValidation() {
         input.classList.remove('error');
         errorElement.textContent = '';
         errorElement.style.display = 'none';
-        if (icons.correct) icons.correct.style.display = 'block';
+        if (icons.correct) icons.correct.style.display = 'flex';
         if (icons.error) icons.error.style.display = 'none';
     }
 
@@ -95,9 +95,16 @@ export function initFormValidation() {
         const isNameValid = validateName();
         const isPhoneValid = validatePhone();
         const isCheckboxValid = validateCheckbox();
-        
+
         if (isNameValid && isPhoneValid && isCheckboxValid) {
-            successMessage.style.display = 'block';
+            const formData = {
+                name: nameInput.value.trim(),
+                phone: phoneInput.value.trim(),
+                agreed: agreeCheckbox.checked
+            };
+            console.log('Данные формы:', formData);
+
+            successMessage.style.display = 'flex';
             setTimeout(() => {
                 form.reset();
                 successMessage.style.display = 'none';
@@ -113,15 +120,15 @@ export function initFormValidation() {
     }
 
     form.addEventListener('submit', handleSubmit);
-    
+
     nameInput.addEventListener('input', validateName);
     nameInput.addEventListener('blur', validateName);
     nameInput.addEventListener('focus', () => clearError(nameInput, nameError, nameIcons));
-    
+
     phoneInput.addEventListener('input', validatePhone);
     phoneInput.addEventListener('blur', validatePhone);
     phoneInput.addEventListener('focus', () => clearError(phoneInput, phoneError, phoneIcons));
-    
+
     agreeCheckbox.addEventListener('change', validateCheckbox);
     agreeCheckbox.addEventListener('focus', () => {
         agreeCheckbox.parentElement.classList.remove('error');
