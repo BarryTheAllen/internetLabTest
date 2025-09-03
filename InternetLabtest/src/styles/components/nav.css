@@ -57,6 +57,10 @@
     color: var(--white);
 }
 
+.nav__link-mob {
+    display: none;
+}
+
 .nav__list-link:hover {
     text-decoration: underline;
     text-decoration-color: var(--white);
