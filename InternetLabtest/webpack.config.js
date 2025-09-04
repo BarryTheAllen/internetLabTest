@@ -4,9 +4,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
-  const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-
-  const publicPath = isGitHubPages ? 'https://yourusername.github.io/internetLabTest/' : '';
+  
+  const isGitHubPages = process.env.npm_lifecycle_event === 'deploy';
+  const publicPath = isGitHubPages ? '/internetLabTest/' : '/';
 
   return {
     entry: './src/index.js',
@@ -29,41 +29,19 @@ module.exports = (env, argv) => {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'images/[hash][ext][query]',
-            publicPath: `${publicPath}images/`
+            filename: 'images/[hash][ext][query]'
           }
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'fonts/[hash][ext][query]',
-            publicPath: `${publicPath}fonts/`
+            filename: 'fonts/[hash][ext][query]'
           }
         },
         {
           test: /\.html$/i,
           loader: 'html-loader',
-          options: {
-            sources: {
-              list: [
-                //...,
-                {
-                  tag: 'img',
-                  attribute: 'src',
-                  type: 'src',
-                },
-                {
-                  tag: 'link',
-                  attribute: 'href',
-                  type: 'src',
-                  filter: (tag, attribute, attributes, resourcePath) => {
-                    return attributes.rel === 'stylesheet' || attributes.rel === 'preload';
-                  },
-                },
-              ]
-            }
-          }
         },
       ],
     },
@@ -73,7 +51,7 @@ module.exports = (env, argv) => {
         filename: 'index.html',
       }),
       ...(isProduction ? [new MiniCssExtractPlugin({
-        filename: 'css/[name].[contenthash].css',
+        filename: '[name].[contenthash].css',
       })] : []),
     ],
     devServer: {
