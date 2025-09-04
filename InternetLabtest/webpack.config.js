@@ -4,9 +4,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
-  const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-
-  const publicPath = isGitHubPages ? '/internetLabTest/' : '/';
 
   return {
     entry: './src/index.js',
@@ -14,8 +11,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].js',
       clean: true,
-      publicPath: publicPath,
-      assetModuleFilename: 'assets/[name].[contenthash][ext]'
+      publicPath: '/internetLabTest/'
     },
     module: {
       rules: [
@@ -30,14 +26,14 @@ module.exports = (env, argv) => {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'images/[name].[contenthash][ext]'
+            filename: 'images/[hash][ext][query]'
           }
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource',
           generator: {
-            filename: 'fonts/[name].[contenthash][ext]'
+            filename: 'fonts/[hash][ext][query]'
           }
         },
         {
@@ -50,17 +46,13 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'index.html',
-        publicPath: publicPath 
       }),
       ...(isProduction ? [new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash].css',
       })] : []),
     ],
     devServer: {
-      static: {
-        directory: path.join(__dirname, 'dist'),
-        publicPath: '/'
-      },
+      static: './dist',
       hot: true,
       open: true,
       port: 3000,
