@@ -1,36 +1,20 @@
 {
   "name": "internetlabtest",
   "version": "1.0.0",
-  "main": "index.js",
-  "homepage": "https://yourusername.github.io/internetLabTest",
+  "homepage": "https://BarryTheAllen.github.io/internetLabTest",
   "scripts": {
-    "start": "webpack serve --mode development --open",
+    "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "build:gh-pages": "set GITHUB_PAGES=true&& webpack --mode production",
-    "build:dev": "webpack --mode development",
-    "watch": "webpack --watch --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build:gh-pages",
     "deploy": "gh-pages -d dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "css-loader": "^7.1.2",
     "gh-pages": "^6.3.0",
-    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.4",
     "mini-css-extract-plugin": "^2.9.4",
-    "postcss-import": "^16.1.1",
-    "postcss-preset-env": "^10.3.1",
     "style-loader": "^4.0.0",
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
-  },
-  "dependencies": {
-    "swiper": "^11.2.10"
   }
 }
