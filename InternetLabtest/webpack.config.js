@@ -8,11 +8,11 @@ module.exports = (env, argv) => {
   return {
     entry: './src/index.js',
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: isProduction ? '[name].[contenthash].js' : '[name].js',
-      publicPath: isProduction ? '/' : '/',
-      clean: true,
-    },
+    path: path.resolve(__dirname, 'dist'),
+    filename: isProduction ? '[name].[contenthash].js' : '[name].js',
+    publicPath: isProduction ? '/internetLabTest.github.io/' : '/', // Указываем подкаталог
+    clean: true,
+  },
     module: {
       rules: [
         {
