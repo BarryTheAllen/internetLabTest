@@ -2,6 +2,7 @@
   "name": "internetlabtest",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://barrytheallen.github.io/internetLabTest.github.io/",
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
