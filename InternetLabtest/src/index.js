@@ -4,11 +4,15 @@ import { initFormValidation } from './modules/formValidation';
 import { initSwiper } from './modules/swiperInit';
 import { initFaqAccordion } from './modules/faqAccordion';
 import { renderReviews } from './modules/reviewsRender';
+import { howThisWorksRender } from './modules/howThisWorksRender';
+import { faqRender } from './modules/faqRender';
 
 document.addEventListener('DOMContentLoaded', function() {
     initBurgerMenu();
     initFormValidation();
-    renderReviews()
+    howThisWorksRender();
+    renderReviews();
     initSwiper();
+    faqRender()
     initFaqAccordion();
 });
