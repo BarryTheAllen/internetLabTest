@@ -10,7 +10,7 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].js',
-      publicPath: isProduction ? '/' : '/', // Устанавливаем корневой путь для GitHub Pages
+      publicPath: isProduction ? '/' : '/',
       clean: true,
     },
     module: {
@@ -19,21 +19,27 @@ module.exports = (env, argv) => {
           test: /\.css$/i,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                url: true,
+                importLoaders: 1,
+              },
+            },
           ],
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
           generator: {
-            filename: './assets/images/[name][ext]',
+            filename: 'assets/images/[name][ext]',
           },
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource',
           generator: {
-            filename: './assets/fonts/[name][ext]',
+            filename: 'assets/fonts/[name][ext]',
           },
         },
         {
