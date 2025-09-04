@@ -11,6 +11,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].js',
       clean: true,
+      publicPath: isProduction ? '/internetLabTest.github.io/' : '/',
     },
     module: {
       rules: [
@@ -18,8 +19,7 @@ module.exports = (env, argv) => {
           test: /\.css$/i,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-            'css-loader',
-            'postcss-loader'
+            'css-loader'
           ],
         },
         {
@@ -42,6 +42,7 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'index.html',
+        publicPath: isProduction ? '/repository-name/' : '/',
       }),
       ...(isProduction ? [new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
@@ -52,6 +53,7 @@ module.exports = (env, argv) => {
       hot: true,
       open: true,
       port: 3000,
+      historyApiFallback: true,
     },
   };
 };
