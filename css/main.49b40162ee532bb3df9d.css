@@ -27,7 +27,7 @@ html {
 }
 @font-face {
     font-family: "Graphik LCG";
-    src: url(fonts/92a1ff709799ec31f9f0.woff2) format('woff2');
+    src: url(https://yourusername.github.io/internetLabTest/fonts/fonts/92a1ff709799ec31f9f0.woff2) format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -55,7 +55,7 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    background-image: url(images/46c73d2792d72656ff06.png);
+    background-image: url(https://yourusername.github.io/internetLabTest/images/images/46c73d2792d72656ff06.png);
     max-width: 100%;
     width: 100%;
     height: 920px;
