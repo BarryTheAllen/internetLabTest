@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
-    "build:gh-pages": "GITHUB_PAGES=true webpack --mode production",
+    "build:gh-pages": "set GITHUB_PAGES=true&& webpack --mode production",
     "build:dev": "webpack --mode development",
     "watch": "webpack --watch --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
