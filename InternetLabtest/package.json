@@ -2,12 +2,15 @@
   "name": "internetlabtest",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://yourusername.github.io/internetLabTest",
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
+    "build:gh-pages": "GITHUB_PAGES=true webpack --mode production",
     "build:dev": "webpack --mode development",
     "watch": "webpack --watch --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build:gh-pages",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
