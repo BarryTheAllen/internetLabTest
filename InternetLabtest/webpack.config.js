@@ -2,11 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const GITHUB_USERNAME = 'BarryTheAllen';
+
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
-  
-  const isGitHubPages = process.env.npm_lifecycle_event === 'deploy';
-  const publicPath = isGitHubPages ? '/internetLabTest/' : '/';
 
   return {
     entry: './src/index.js',
@@ -14,7 +13,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: isProduction ? '[name].[contenthash].js' : '[name].js',
       clean: true,
-      publicPath: publicPath
+      publicPath: `https://${GITHUB_USERNAME}.github.io/internetLabTest/`
     },
     module: {
       rules: [
@@ -28,16 +27,10 @@ module.exports = (env, argv) => {
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
-          generator: {
-            filename: 'images/[hash][ext][query]'
-          }
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource',
-          generator: {
-            filename: 'fonts/[hash][ext][query]'
-          }
         },
         {
           test: /\.html$/i,
